@@ -1,0 +1,28 @@
+CompileFlags:
+  # Treat code as C++
+  Add: [-std=c++latest, -xc++]
+  
+  # Include directories (these should match your project)
+  # Add: [-Isrc, -Ilib/commonlibsse-ng/extern/openvr/headers, -Ilib/commonlibsse-ng/include]
+  
+  # Ignore compilation warnings from the compiler headers
+  Remove: [-W*, -w]
+
+Diagnostics:
+  # Tweak Clang-Tidy checks
+  ClangTidy:
+    Add: [modernize*, performance*, readability*]
+    Remove: [modernize-use-trailing-return-type]
+    CheckOptions:
+      readability-identifier-naming.VariableCase: camelBack
+
+Index:
+  Background: Build
+  
+InlayHints:
+  Enabled: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes
+  
+Hover:
+  ShowAKA: Yes

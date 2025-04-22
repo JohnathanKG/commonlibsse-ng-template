@@ -19,7 +19,6 @@ set_policy("package.requires_lock", true)
 -- add rules
 add_rules("mode.debug", "mode.releasedbg")
 add_rules("plugin.vsxmake.autoupdate")
-
 -- targets
 target("commonlibsse-ng-template")
     -- add dependencies to target
